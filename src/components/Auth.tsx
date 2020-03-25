@@ -8,8 +8,7 @@ const Auth: React.FunctionComponent<React.ReactNode> = ({ children }): any => {
   const [isChecked, setIsChecked] = React.useState(false);
 
   React.useEffect(() => {
-    auth.onAuthStateChanged(user => {
-      console.log(user);
+    auth.onAuthStateChanged(_ => {
       setIsChecked(true);
     });
   }, []);

@@ -3,7 +3,7 @@ import { Button, Layout, Row, Col } from "antd";
 import { GoogleOutlined } from "@ant-design/icons";
 import { RouteComponentProps } from "react-router";
 import { auth, GoogleAuthProvider } from "../firebase/index";
-import { Colors } from "../components/colors";
+import { Colors } from "../components/Colors";
 import BrandLogo from "components/BrandLogo";
 import Spinner from "../components/Spinner";
 
@@ -16,8 +16,18 @@ const Login: React.FunctionComponent<Props> = props => {
         .getRedirectResult()
         .then(res => {
           if (res.credential) {
-            props.history.push("/");
-            sessionStorage.removeItem("signIn");
+            console.log(res.user);
+            res.user
+              .reload()
+              .then(() => {
+                props.history.push("/");
+                sessionStorage.removeItem("signIn");
+              })
+              .catch(error => {
+                console.log(error);
+                props.history.push("/login");
+                sessionStorage.removeItem("signIn");
+              });
           } else {
             sessionStorage.removeItem("signIn");
             location.reload();

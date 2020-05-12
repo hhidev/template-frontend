@@ -61,7 +61,7 @@ const Login: React.FunctionComponent<Props> = props => {
           <Col span={8} offset={8}>
             <BrandLogo
               style={{
-                fontSize: "150px",
+                fontSize: "15rem",
                 display: "block",
                 marginBottom: "2rem"
               }}

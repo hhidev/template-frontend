@@ -93,10 +93,10 @@ export default class SignUp extends React.Component<{}, State> {
 const AccountBlock = styled.div`
   margin: 3em 0;
   box-sizing: border-box;
-  padding: 40px;
+  padding: 4rem;
   background: #fafafa;
-  border: 1px solid #d9d9d9;
-  border-radius: 10px;
-  font-size: 16px;
+  border: 0.1rem solid #d9d9d9;
+  border-radius: 1rem;
+  font-size: 1.6rem;
   color: #999;
 `;

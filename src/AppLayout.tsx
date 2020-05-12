@@ -40,7 +40,7 @@ export default withRouter(AppLayout);
 
 const AvatarItem = styled.div`
   position: absolute;
-  bottom: 80px;
+  bottom: 8rem;
   width: 100%;
   padding: 0 1rem !important;
   text-align: center;

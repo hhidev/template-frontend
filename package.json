@@ -77,7 +77,7 @@
     "dotenv": "^8.2.0",
     "hard-source-webpack-plugin": "^0.13.1",
     "interpolate-html-plugin": "^3.0.0",
-    "swagger-ui-react": "^3.22.2",
+    "swagger-ui-react": "^4.1.3",
     "webpack-merge": "^4.2.2"
   },
   "scripts": {
